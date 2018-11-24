@@ -15,6 +15,7 @@ class papaJohns:
         from selenium.webdriver.support import expected_conditions as EC
         from selenium.webdriver.support.wait import WebDriverWait
         from selenium.webdriver.support.ui import Select
+        from selenium.webdriver.chrome.options import Options
 
         driver = webdriver.Chrome()
 
@@ -76,3 +77,7 @@ class papaJohns:
         #finds price
         total = driver.find_element_by_xpath('//*[@id="vcFormId"]/table/tbody/tr[5]/td[2]/h3')
         return total.text
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4511eb470dd48ee293076f555fc41ed5dbf53859
