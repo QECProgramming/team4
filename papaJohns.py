@@ -15,6 +15,7 @@ class papaJohns:
         from selenium.webdriver.support import expected_conditions as EC
         from selenium.webdriver.support.wait import WebDriverWait
         from selenium.webdriver.support.ui import Select
+        from selenium.webdriver.chrome.options import Options
         
         driver = webdriver.Chrome(executable_path="C:/Users/lenov/seleniumWebDriver/chromedriver.exe")
         
@@ -77,5 +78,3 @@ class papaJohns:
         total = driver.find_element_by_xpath('//*[@id="vcFormId"]/table/tbody/tr[5]/td[2]/h3')
         return total.text
         
-p1 = papaJohns('433 Brock Street','K7L1T5','Small',3,2)
-print(p1.findCost())
