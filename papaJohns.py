@@ -77,7 +77,3 @@ class papaJohns:
         #finds price
         total = driver.find_element_by_xpath('//*[@id="vcFormId"]/table/tbody/tr[5]/td[2]/h3')
         return total.text
-<<<<<<< HEAD
-=======
-
->>>>>>> 4511eb470dd48ee293076f555fc41ed5dbf53859
