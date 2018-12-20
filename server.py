@@ -1,4 +1,5 @@
 from flask import Flask, request, redirect
+from flask import jsonify
 from papaJohns import papaJohns
 from skipthedishes import SkipTheDishes
 
@@ -10,9 +11,9 @@ def root():
     if request.method == 'POST':
         body = request.form.to_dict(flat=False)
 
-        Johns = papaJohns("507 Princess St. Kingston Ontario", "K7L 1C6", body["pizzaSize"][0], body["pizzaToppings"][0], 1)
+        Johns = papaJohns("507 Princess St. Kingston Ontario", "K7L 1C6", body["pizzaSize"][0], 1, 1)
 
-        return app.send({
+        return jsonify({
             "Papa John's Pizza": Johns.findCost(),
             "Skip The Dishes Rec": SkipTheDishes.find(body["pizzaSize"][0], 1, body["pizzaToppings"][0])
         })
